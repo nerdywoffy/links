@@ -60,6 +60,6 @@ const handleShortlinkRequest = async (request: IRequest, env: Env, context: Exec
 router.get('/robots.txt', (req, env, ctx) => text(`User-agent: *\nDisallow: /`))
 router.get('/:id', handleShortlinkRequest);
 router.post('/:id', handleShortlinkRequest);
-router.all('*', (req, env, ctx) => status(301, {headers: {'Location': 'https://nerdywoffy.me'}}))
+router.all('*', (req, env, ctx) => status(301, {headers: {'Location': env.DEFAULT_REDIRECT}}))
 
 export default router;

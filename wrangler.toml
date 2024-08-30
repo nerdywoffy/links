@@ -6,6 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 LINKS_KV_NAMESPACE = "links"
+DEFAULT_REDIRECT = "https://nerdywoffy.me"
 
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
